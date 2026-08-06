@@ -1,0 +1,44 @@
+ Question 2
+ 
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+
+PS1 : defines the primary shell prompt
+' ' : prompt shell is enclosed in single quotes
+${debian_chroot:+($debian_chroot)} : displays debian chroot name in parantheses if one exists
+\[ : starts non printing escape sequence
+\033[01;32m : changes text color to bright green
+\] : ends non printing sequence
+\u : displays username
+@ : prints @ symbol
+\h : displays host name
+\[\033[00m\] : resets text color to default
+: : prints colon
+\[\033[01;34m\] : changes text color to bright blue
+\w : displays current working directory
+\[\033[00m\] : resets text color to default
+\$ : displays $
+
+\e]0; : begins setting terminal title
+\a ends title setting sequence
+$PS1 : append the previous prompt
+
+Question 3
+
+HISTCONTROL=ignoreboth
+HISTFILE=/home/ibab/.bash_history
+HISTFILESIZE=2000
+HISTSIZE=1000
+
+HISTCONTROL =  sets rules for savings commands
+ignoreboth = combines 2 specific conditions
+HISTSIZE = controls active RAM memory storage
+1000: your current terminal session will remember your last 1000 commands for quick scrolling.
+HISTFILESIZE = controls permanent disk storage
+2000: your file (~/.bash_history) will keep a maximum of 2000 total commands before deleting the oldest entries.
+
+Question 4
+
+The whereis command shows us the path of binary, source and manual files of the given command
+The which command only shows us the path source file of the given command.
