@@ -1,0 +1,11 @@
+Question2
+sort -k1,1n pig_weights.csv > firstColumn.csv
+sort -k2,2n pig_weights.csv > secondColumn.csv
+sort -k3,3n pig_weights.csv > thirdColumn.csv
+sort -k4,4n pig_weights.csv > fourthColumn.csv
+
+
+Question3
+sort -n -t',' -k2,2 SOCR-HeightWeight_data.csv
+No, the tallest person does not weight the most.
+
