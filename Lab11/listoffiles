@@ -1,0 +1,6 @@
+.:
+total 12
+-rw-rw-r-- 1 ibab ibab  54 Oct 26 21:28 filesnotpresent
+-rw-rw-r-- 1 ibab ibab   0 Oct 26 21:28 listoffiles
+-rw-rw-r-- 1 ibab ibab 173 Oct 26 21:28 presentfiles
+-rw-rw-r-- 1 ibab ibab 227 Oct 26 21:28 question1.sh
